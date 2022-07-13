@@ -13,6 +13,9 @@
 		FAB8E861287EEFCF00E5F9FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB8E85F287EEFCF00E5F9FA /* Main.storyboard */; };
 		FAB8E863287EEFD100E5F9FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB8E862287EEFD100E5F9FA /* Assets.xcassets */; };
 		FAB8E866287EEFD100E5F9FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB8E864287EEFD100E5F9FA /* LaunchScreen.storyboard */; };
+		FAB8E876287EF4EF00E5F9FA /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E875287EF4EF00E5F9FA /* Article.swift */; };
+		FAB8E87C287EF71600E5F9FA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E87B287EF71600E5F9FA /* WebService.swift */; };
+		FAB8E87E287F02F900E5F9FA /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8E87D287F02F900E5F9FA /* ArticleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		FAB8E862287EEFD100E5F9FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB8E865287EEFD100E5F9FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB8E867287EEFD100E5F9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB8E875287EF4EF00E5F9FA /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		FAB8E87B287EF71600E5F9FA /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		FAB8E87D287F02F900E5F9FA /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,74 @@
 		FAB8E858287EEFCF00E5F9FA /* BreakingNews */ = {
 			isa = PBXGroup;
 			children = (
-				FAB8E859287EEFCF00E5F9FA /* AppDelegate.swift */,
-				FAB8E85B287EEFCF00E5F9FA /* SceneDelegate.swift */,
-				FAB8E85D287EEFCF00E5F9FA /* ViewController.swift */,
-				FAB8E85F287EEFCF00E5F9FA /* Main.storyboard */,
-				FAB8E862287EEFD100E5F9FA /* Assets.xcassets */,
-				FAB8E864287EEFD100E5F9FA /* LaunchScreen.storyboard */,
-				FAB8E867287EEFD100E5F9FA /* Info.plist */,
+				FAB8E87A287EF70600E5F9FA /* Service */,
+				FAB8E872287EF04400E5F9FA /* View */,
+				FAB8E871287EF03D00E5F9FA /* ViewModel */,
+				FAB8E870287EF03500E5F9FA /* Model */,
+				FAB8E86F287EF02F00E5F9FA /* StoryBoard */,
+				FAB8E86D287EF01800E5F9FA /* Resources */,
+				FAB8E86E287EF02100E5F9FA /* Utilities */,
 			);
 			path = BreakingNews;
+			sourceTree = "<group>";
+		};
+		FAB8E86D287EF01800E5F9FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAB8E867287EEFD100E5F9FA /* Info.plist */,
+				FAB8E862287EEFD100E5F9FA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FAB8E86E287EF02100E5F9FA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FAB8E85B287EEFCF00E5F9FA /* SceneDelegate.swift */,
+				FAB8E859287EEFCF00E5F9FA /* AppDelegate.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FAB8E86F287EF02F00E5F9FA /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				FAB8E864287EEFD100E5F9FA /* LaunchScreen.storyboard */,
+				FAB8E85F287EEFCF00E5F9FA /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		FAB8E870287EF03500E5F9FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAB8E875287EF4EF00E5F9FA /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAB8E871287EF03D00E5F9FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAB8E87D287F02F900E5F9FA /* ArticleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAB8E872287EF04400E5F9FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAB8E85D287EEFCF00E5F9FA /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAB8E87A287EF70600E5F9FA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FAB8E87B287EF71600E5F9FA /* WebService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +203,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB8E876287EF4EF00E5F9FA /* Article.swift in Sources */,
 				FAB8E85E287EEFCF00E5F9FA /* ViewController.swift in Sources */,
 				FAB8E85A287EEFCF00E5F9FA /* AppDelegate.swift in Sources */,
+				FAB8E87E287F02F900E5F9FA /* ArticleViewModel.swift in Sources */,
+				FAB8E87C287EF71600E5F9FA /* WebService.swift in Sources */,
 				FAB8E85C287EEFCF00E5F9FA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +357,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WL3K4A7DH8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BreakingNews/Info.plist;
+				INFOPLIST_FILE = BreakingNews/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +385,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WL3K4A7DH8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BreakingNews/Info.plist;
+				INFOPLIST_FILE = BreakingNews/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
